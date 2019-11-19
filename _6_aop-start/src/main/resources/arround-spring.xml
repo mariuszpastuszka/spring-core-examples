@@ -1,0 +1,16 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop.xsd
+         http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <aop:aspectj-autoproxy/>
+
+    <bean id="service" class="workshop.spring5.aop.service.MyServiceImpl"/>
+    <bean id="subservice" class="workshop.spring5.aop.service.subpackage.SubserviceImpl"/>
+
+    <bean id="arroundAspect" class="workshop.spring5.aop.aspects.AroundAspect"/>
+
+</beans>
